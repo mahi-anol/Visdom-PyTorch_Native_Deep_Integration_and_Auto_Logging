@@ -132,7 +132,7 @@ trainer.fit(model, train_dataloaders=train_loader, val_dataloaders=val_loader)
 - Hook execution time breakdown
 
 **Results**:
-- Profiling output saved to [results/Task-4/profiling output.txt.txt](results/Task-4/profiling%20output.txt.txt)
+- Profiling output saved to [results/Task-4/profiling output.txt](results/Task-4/profiling%20output.txt)
 - Allows informed decisions on hook-based monitoring feasibility
 
 ---
