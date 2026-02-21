@@ -1,0 +1,32 @@
+Total Overhead: -7.55%
+
+Starting Torch Profiling...
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------
+
+                                                   Name    Self CPU %      Self CPU   CPU total %     CPU total  CPU time avg    # of Calls
+
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------
+
+                                  batch_pass_with_hooks         7.25%       2.629ms       100.00%      36.266ms      36.266ms             1
+
+                                       aten::max_pool2d         0.06%      23.200us        34.05%      12.350ms       6.175ms             2
+
+                          aten::max_pool2d_with_indices        33.99%      12.326ms        33.99%      12.326ms       6.163ms             2
+
+autograd::engine::evaluate_function: ConvolutionBack...         0.13%      48.300us        23.71%       8.600ms       4.300ms             2
+
+                                   ConvolutionBackward0         0.09%      32.100us        23.58%       8.551ms       4.276ms             2
+
+                             aten::convolution_backward        23.36%       8.471ms        23.49%       8.519ms       4.260ms             2
+
+                                           aten::conv2d         0.06%      21.300us        16.14%       5.855ms       2.927ms             2
+
+                                      aten::convolution         0.19%      68.500us        16.08%       5.833ms       2.917ms             2
+
+                                     aten::_convolution         0.09%      32.800us        15.90%       5.765ms       2.882ms             2
+
+                               aten::mkldnn_convolution        15.58%       5.649ms        15.80%       5.732ms       2.866ms             2
+
+-------------------------------------------------------  ------------  ------------  ------------  ------------  ------------  ------------
+
+Self CPU time total: 36.266ms
