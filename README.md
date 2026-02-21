@@ -1,8 +1,8 @@
 # PyTorch-Visdom Native Deep Integration & Auto-Logging
+This repository contains the codes for the starter task of VISDOM project under GSoc 2026. More specifically its the starter tasks of "PyTorch-Native Deep Integration & Auto-Logging" project.
+This project is a initiative towards automatic metric logging and deep framework integration between PyTorch, Lightning and Visdom, minimizing boilerplate code and making experiment tracking effortless.
 
-A comprehensive project implementing automatic metric logging and deep framework integration between PyTorch and Visdom, minimizing boilerplate code and making experiment tracking effortless.
-
-## 📋 Project Overview
+## Project Overview
 
 This project addresses a critical pain point in PyTorch model training: the need for repetitive manual metric logging. Instead of writing:
 
@@ -25,15 +25,15 @@ trainer.fit()  # Automatically logs everything
 ```
 
 ### Key Objectives
-- ✅ Automatic detection and logging of common training metrics (loss, accuracy, learning rate)
-- ✅ Deep integration with PyTorch training workflows
-- ✅ Reduction of manual instrumentation while maintaining flexibility
-- ✅ Consistent and complete experiment tracking with minimal developer effort
-- ✅ Performance overhead analysis for hook-based logging
+- Automatic detection and logging of common training metrics (loss, accuracy, learning rate)
+- Deep integration with PyTorch training workflows
+- Reduction of manual instrumentation while maintaining flexibility
+- Consistent and complete experiment tracking with minimal developer effort
+- Performance overhead analysis for hook-based logging
 
 ---
 
-## 🎯 Tasks & Implementation
+## Tasks & Implementation
 
 ### Task 1: Manual CNN Training with Visdom Logging
 **Objective**: Establish baseline PyTorch training with manual Visdom integration
@@ -180,7 +180,7 @@ grad_logger.cleanup()
 
 ---
 
-## 🚀 Setup & Installation
+## Setup & Installation
 
 ### Prerequisites
 - Python 3.7+
@@ -206,6 +206,7 @@ torch
 torchvision
 visdom
 lightning
+torchmetrics
 ```
 
 3. **Start Visdom server** (in a separate terminal):
@@ -217,7 +218,7 @@ The server will run at `http://localhost:8097`
 
 ---
 
-## 📊 Running Each Task
+## Running Each Task
 
 ### Task 1: Manual CNN Training
 ```bash
@@ -290,14 +291,14 @@ python -m src.Task5.train_with_visdom_gradient_norm_logger
 
 ---
 
-## 📈 Results Summary
+## Results Summary
 
-| Task | Objective | Status | Key Metric |
+| Task | Objective | Status | Outcome |
 |------|-----------|--------|-----------|
-| 1 | Manual Visdom logging | ✅ Completed | Baseline: Manual instrumentation required |
-| 2-3 | Lightning integration | ✅ Completed | Reduced boilerplate via Logger interface |
-| 4 | Hook overhead analysis | ✅ Completed | Profiling data collected |
-| 5 | Gradient norm logger | ✅ Completed | Automatic layer-wise monitoring |
+| 1 | Manual Visdom logging | Completed | Baseline: Manual instrumentation required |
+| 2-3 | Lightning integration | Completed | Reduced boilerplate via Logger interface |
+| 4 | Hook overhead analysis | Completed | Profiling data collected |
+| 5 | Gradient norm logger | Completed | Automatic layer-wise monitoring |
 
 ### Performance Insights
 - Task 4 provides overhead quantification for hook-based monitoring
@@ -306,7 +307,7 @@ python -m src.Task5.train_with_visdom_gradient_norm_logger
 
 ---
 
-## 🏗️ Project Structure
+## Project Structure
 
 ```
 .
@@ -338,7 +339,7 @@ python -m src.Task5.train_with_visdom_gradient_norm_logger
 
 ---
 
-## 🔑 Key Concepts
+## Key Concepts
 
 ### Auto-Logging
 Reducing manual `vis.line()` calls by leveraging framework integration (Lightning loggers, PyTorch hooks)
@@ -354,7 +355,7 @@ Tracking gradient norms as a diagnostic tool for training health and optimizatio
 
 ---
 
-## 🎓 Learning Outcomes
+## Learning Outcomes
 
 By completing this project, you will understand:
 
@@ -367,7 +368,7 @@ By completing this project, you will understand:
 
 ---
 
-## 📝 Notes
+## Notes
 
 - Ensure Visdom server is running before executing any training script
 - MNIST data is downloaded automatically on first run (requires ~50MB)
@@ -376,7 +377,7 @@ By completing this project, you will understand:
 
 ---
 
-## 🔗 References
+## References
 
 - **Visdom Documentation**: https://github.com/fossasia/visdom
 - **PyTorch Documentation**: https://pytorch.org/docs/
@@ -385,7 +386,7 @@ By completing this project, you will understand:
 
 ---
 
-## 📌 Summary
+## Summary
 
 This project demonstrates a progression from manual metric logging (Task 1) → framework-integrated logging (Tasks 2-3) → performance-conscious automatic logging (Tasks 4-5). The result is a template for zero-config training visualization that maintains performance while maximizing developer productivity.
 

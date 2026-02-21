@@ -1,3 +1,5 @@
 torch
 torchvision
 visdom
+lightning
+torchmetrics
